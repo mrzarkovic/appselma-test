@@ -1,0 +1,41 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "volumes": [
+    {
+      "name": "appselma-app",
+      "host": {
+        "sourcePath": "/var/app/appselma-app"
+      }
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "name": "appselma-app",
+      "image": "430864128097.dkr.ecr.eu-west-1.amazonaws.com/appselma:staging",
+      "environment": [
+        {
+          "name": "APP_NAME",
+          "value": "AppSelMa"
+        },
+        {
+          "name": "APP_URL",
+          "value": "http://appselma-staging.eu-west-1.elasticbeanstalk.com/"
+        }
+      ],
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "appselma-app",
+          "containerPath": "/var/www/html",
+          "readOnly": true
+        }
+      ]
+    }
+  ]
+}
