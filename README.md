@@ -4,15 +4,16 @@
 
 ### Folder structure
 
+> ```
 > root
 > ├── Dockerrun.aws.json
 > ├── .ebextensions
 > │ └── environmentvariables.config <- Environment variables
-> ├── .elasticbeanstalk
-
-    ├── config.yml
-    ├── Dockerfile.local
-    └── logs
+> └── .elasticbeanstalk
+>    ├── config.yml
+>    ├── Dockerfile.local
+>    └── logs
+> ```
 
 #### Dockerrun.aws.json
 
