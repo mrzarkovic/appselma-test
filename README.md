@@ -115,13 +115,20 @@ option_settings:
 
 ## Project initialization
 
-- Initialize App
-  `$ eb init -i` [Example](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-init.html#eb3-initexample)
+- Initialize App ([example](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb3-init.html#eb3-initexample))
+
+  `$ eb init -i`
+
 - Create EB App on AWS
+
   `$ eb create appselma`
+
 - (Optional) Update App (uses latest git commit)
+
   `$ eb deploy`
+
 - (Don't do this if not necessary) Delete all resources
+
   `$ eb terminate appselma`
 
 ## CI Workflow
@@ -142,10 +149,11 @@ Run this in your CI/CD build script:
 
 - Configure CLIs
 
-  `$ export PATH=$PATH:/root/.local/bin`
-  `$ export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID`
-  `$ export AWS_SECRET_ACCESS_KEY=$AWS_ACCESS_KEY_SECRET`
-  `$ aws configure set default.region $AWS_REGION`
+  - `$ export PATH=$PATH:/root/.local/bin`
+  - `$ export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID`
+  - `$ export AWS_SECRET_ACCESS_KEY=$AWS_ACCESS_KEY_SECRET`
+  - `$ aws configure set default.region $AWS_REGION`
 
 - Update App
+
   `$ eb deploy`
