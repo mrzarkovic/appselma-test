@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: null
+    environment: appselma
 global:
   application_name: AppSelMa
   branch: null
