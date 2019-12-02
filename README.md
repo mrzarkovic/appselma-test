@@ -4,16 +4,16 @@
 
 ### Folder structure
 
-> ```
-> root
-> ├── Dockerrun.aws.json
-> ├── .ebextensions
-> │ └── environmentvariables.config <- Environment variables
-> └── .elasticbeanstalk
->    ├── config.yml
->    ├── Dockerfile.local
->    └── logs
-> ```
+```
+ root
+ ├── Dockerrun.aws.json
+ ├── .ebextensions
+ │ └── environmentvariables.config <- Environment variables
+ └── .elasticbeanstalk
+    ├── config.yml
+    ├── Dockerfile.local
+    └── logs
+```
 
 #### Dockerrun.aws.json
 
@@ -126,16 +126,26 @@ option_settings:
 
 ## CI Workflow
 
+Run this in your CI/CD build script:
+
 - Install dependency tools
+
   `$ apk add --no-cache --virtual .build-deps g++ python3-dev libffi-dev openssl-dev && apk add --no-cache --update python3 && pip3 install --upgrade pip setuptools`
+
 - Install AWS CLI
+
   `$ pip3 install awscli --upgrade --user`
+
 - Install AWS EB CLI
+
   `$ pip install awsebcli --upgrade --user`
+
 - Configure CLIs
+
   `$ export PATH=$PATH:/root/.local/bin`
   `$ export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID`
   `$ export AWS_SECRET_ACCESS_KEY=$AWS_ACCESS_KEY_SECRET`
   `$ aws configure set default.region $AWS_REGION`
+
 - Update App
   `$ eb deploy`
