@@ -1,0 +1,19 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Volumes": [
+    {
+      "HostDirectory": "/var/app/appselma-app",
+      "ContainerDirectory": "/var/www/html"
+    }
+  ],
+  "Image": {
+    "Name": "registry.gitlab.com/talent-data-labs/appselma:staging",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": 80,
+      "HostPort": 80
+    }
+  ]
+}
