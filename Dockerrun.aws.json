@@ -3,7 +3,7 @@
   "Volumes": [
     {
       "HostDirectory": "/var/app/appselma-app",
-      "ContainerDirectory": "/var/www/html"
+      "ContainerDirectory": "/var/www/html/storage"
     }
   ],
   "Image": {

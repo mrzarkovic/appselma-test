@@ -1,10 +1,13 @@
 branch-defaults:
   master:
     environment: appselma
+environment-defaults:
+  appselma:
+    branch: null
+    repository: null
 global:
   application_name: AppSelMa
-  branch: null
-  default_ec2_keyname: null
+  default_ec2_keyname: eb-test
   default_platform: Docker 18.09.9-ce
   default_region: eu-central-1
   include_git_submodules: true
@@ -12,6 +15,5 @@ global:
   platform_name: null
   platform_version: null
   profile: milos-tdl-aws
-  repository: null
   sc: git
   workspace_type: Application

@@ -1,0 +1,2 @@
+FROM 628016664995.dkr.ecr.eu-central-1.amazonaws.com/appselma:latest
+EXPOSE 80
